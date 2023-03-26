@@ -1,0 +1,17 @@
+const cors =require( "cors")
+const express =require("express") 
+const mongoose =require("mongoose") 
+const dotenv =require("dotenv") 
+// const multer =require("multer") 
+const route =require("./routes") 
+const app = express()
+ dotenv.config()
+ app.use(express.json())
+mongoose.connect(process.env.DB)
+.then(() => console.log("MongoDb is connected"))
+.catch((err) => console.log(err));
+app.use(cors())
+app.use("/",route)
+app.listen(process.env.PORT,()=>{
+    console.log("server running")
+})
