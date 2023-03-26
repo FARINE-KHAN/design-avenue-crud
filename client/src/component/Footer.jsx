@@ -12,7 +12,7 @@ right:43rem;
 const Footer = () => {
   return (
   <Foot>
-    <p>made by <span><a href='https://github.com/FARINE-KHAN'>FARINE</a></span></p>
+    <p>made by <span><a style={{textDecoration:"none"}} href='https://github.com/FARINE-KHAN'>FARINE</a></span></p>
   </Foot>
   )
 }
